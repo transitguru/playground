@@ -1,0 +1,75 @@
+<svg version="1.1" viewbox="0 0 800 200">
+  <text x="10" y="50">master</text>
+  <text x="10" y="75">hotfix</text>
+  <text x="10" y="100">release</text>
+  <text x="10" y="125">develop</text>
+  <text x="10" y="150">feature1</text>
+  <text x="10" y="175">feature2</text>
+  <polyline points="0,50 800,50" />
+  <polyline points="0,75 800,75" />
+  <polyline points="0,100 800,100" />
+  <polyline points="0,125 800,125" />
+  <polyline points="0,150 800,150" />
+  <polyline points="0,175 800,175" />
+
+  
+  <!-- Master -->
+  <path class="master" d="M 100,50 L 800,50" />
+  <text x="100" y="50" transform="rotate(-45, 100,50), translate(15)">v0.0.0</text>
+  <text x="150" y="50" transform="rotate(-45, 150,50), translate(15)">v0.1.0</text> 
+  <text x="550" y="50" transform="rotate(-45, 550,50), translate(15)">v0.2.0</text> 
+  <text x="700" y="50" transform="rotate(-45, 700,50), translate(15)">v0.2.1</text> 
+  <text x="750" y="50" transform="rotate(-45, 750,50), translate(15)">v0.3.0</text> 
+  
+  <!-- Develop -->
+  <path class="develop" d="M 150,50 C 200,50 150,125 200,125 L 800,125" />
+  
+  <!-- Hotfix -->  
+  <path class="hotfix" d="M 550,50 C 600,50 550,75 600,75 L 650,75 C 700,75 675,50 700,50" />
+  <path class="hotfix" d="M 650,75 C 700,75 650,125 700,125" />
+  
+  <!-- Feature -->    
+  <path class="feature" d="M 200,125 C 250,125 225,150 250,150 L 350,150 C 375,150 350,125 400,125" />
+  <path class="feature" d="M 300,125 C 350,125 300,175 350,175 L 550,175 C 600,175 550,125 600,125" />
+        
+  <!-- Release -->    
+  <path class="release" d="M 400,125 C 450,125 425,100 450,100 L 500,100 C 550,100 500,50 550,50" />
+  <path class="release" d="M 500,100 C 550,100 500,125 550,125" />
+  <path class="release" d="M 600,125 C 650,125 625,100 650,100 L 700,100 C 750,100 700,50 750,50" />
+  <path class="release" d="M 700,100 C 750,100 700,125 750,125" />
+  
+  <!-- Circles -->
+  <circle class="master" id="v0.0" r="10" cx="100" cy="50" />   
+  <circle class="master" id="v0.1" r="10" cx="150" cy="50" />
+  <circle class="master" id="v0.2.0" r="10" cx="550" cy="50" />
+  <circle class="master" id="v0.2.1" r="10" cx="700" cy="50" />
+  <circle class="master" id="v0.3.0" r="10" cx="750" cy="50" />
+
+  <circle class="develop" r="10" cx="200" cy="125" />
+  <circle class="develop" r="10" cx="300" cy="125" />
+  <circle class="develop" r="10" cx="400" cy="125" />
+  <circle class="develop" r="10" cx="550" cy="125" />
+  <circle class="develop" r="10" cx="600" cy="125" />
+  <circle class="develop" r="10" cx="700" cy="125" />
+  <circle class="develop" r="10" cx="750" cy="125" />
+
+  <circle class="release" r="10" cx="450" cy="100" />
+  <circle class="release" r="10" cx="500" cy="100" />
+  <circle class="release" r="10" cx="650" cy="100" />
+  <circle class="release" r="10" cx="700" cy="100" />
+
+  <circle class="hotfix"  r="10" cx="600" cy="75" />
+  <circle class="hotfix"  r="10" cx="650" cy="75" />
+
+
+  <circle class="feature"  r="10" cx="250" cy="150" />
+  <circle class="feature"  r="10" cx="300" cy="150" />
+  <circle class="feature"  r="10" cx="350" cy="150" />
+
+  <circle class="feature"  r="10" cx="350" cy="175" />
+  <circle class="feature"  r="10" cx="400" cy="175" />
+  <circle class="feature"  r="10" cx="450" cy="175" />
+  <circle class="feature"  r="10" cx="500" cy="175" />
+  <circle class="feature"  r="10" cx="550" cy="175" />
+  
+</svg>

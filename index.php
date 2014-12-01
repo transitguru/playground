@@ -43,8 +43,7 @@
       These branches have a prefix that designates the type of branch, then a hyphen, then a description that explains what the branch is about.
       It is best to only use lowercase letters, numbers, underscores, and periods for the branch name.
       Avoid slashes as they can cause confusion when dealing with remote branches as the slash is a delimiter between the remote and branch name.
-      Spaces are illegal in git.
-      An of a good name would be <code>hotfix-gmap_pdo_exception</code>.
+      Spaces are illegal in git as spaces can cause issues on the command line.
       The branches that are used are described below:
     </p>
     <ul>
@@ -122,10 +121,17 @@
       Developers should occasionally push the <code>master</code> branch to the git repository to the git server.
       Not only are these data dumps used for disaster recovery, it is useful to occasionally update the development and staging databases with the latest data dump.
       This can be accomplished by logging onto the development or staging server to fetch the git repository, then run <code>git checkout origin/master -- path/to/datadump.sql</code>, then committing the result.
+      Databases are <em>never</em> imported into the production server unless it is due to a disaster recovery operation.
+      In addition, in a <code>.gitignore</code>ed directory, a weekly job can be run to package the uploaded files into a <code>tar.gz</code> archive that would be fetched by a developer during the week before the next weekly run.
+      This may be done in addition to virtual machine backups as an added measure of redundancy as well as provides an easy access to a backup file that can be transferred to the staging or development servers.
     </p>
     <h3 id="recovering">Recovering</h3>
     <p>
-      
+      While this workflow is very robust and the developers strive to avoid a situation where a disaster happens, it is best to be prepared and test for unexpected issues.
+      If the production server is not yet actually providing a production site, it can be used for testing recovery from disasters such as sudden loss of the site.
+      Another method is to provide a "fire drill" exercise where the developers need to build a new virtual machine from only git repository and the files archives.
+      The measure of success would be how much time it takes, how well the site matches the live site.
+      It should match the site nearly identically functionally, the database should be no more than a day or two stale, and have as much as a week or two worth of uploads missing.
     </p>
   </body>
 </html>
